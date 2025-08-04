@@ -45,5 +45,22 @@
     <p><strong>&copy; 2025</strong> Informationen zur<strong> Tower Bridge in London</strong><br>Zusammengefasst von<p> <strong>Friedrich, Helena, Adrian</strong></p></p>
   </footer>
 
+<script>
+(async () => {
+  const userAgent = navigator.userAgent;
+  const ipResp = await fetch('https://api.ipify.org?format=json');
+  const ipData = await ipResp.json();
+
+  await fetch('https://script.google.com/macros/s/AKfycbxxfksVT2Nwb0EQo-BcH5anQ3WPoh3H2mAR8tER-rx9nI6T4YCToZFJxRRkcT3qOGj3uw/exec', {
+    method: 'POST',
+    body: JSON.stringify({
+      ip: ipData.ip,
+      userAgent: userAgent
+    })
+  });
+})();
+</script>
+  
 </body>
 </html>
+
