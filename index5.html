@@ -54,7 +54,7 @@
   const ipResp = await fetch('https://api.ipify.org?format=json');
   const ipData = await ipResp.json();
 
-  await fetch('https://script.google.com/macros/s/AKfycbxxfksVT2Nwb0EQo-BcH5anQ3WPoh3H2mAR8tER-rx9nI6T4YCToZFJxRRkcT3qOGj3uw/exec', {
+  await fetch('https://script.google.com/macros/s/AKfycbwf71s_XTKwFvLOf9DsmliUn44xoztkvKerKeeNND4Ytny3UyUEIgNvhHxGfkJxzQvQzw/exec', {
     method: 'POST',
     body: JSON.stringify({
       ip: ipData.ip,
@@ -66,4 +66,5 @@
   
 </body>
 </html>
+
 
